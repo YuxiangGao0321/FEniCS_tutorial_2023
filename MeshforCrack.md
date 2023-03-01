@@ -1,4 +1,10 @@
 # Mesh generation for a domain with crack or notch
+## Mesh size
+The length scale $l_c$ can be derived from
+$l_c \approx \frac{E G_{Ic}}{\sigma^2_c}=\frac{(1-\nu^2)K^2_{Ic}}{\sigma^2_c}$
+where $G_{Ic}$ is critical strain energy release rate, $K_{Ic}$ is the critical stress intensity factor, and $\sigma_c$ is the critical stress.
+
+The mesh size $l_m$ should be sufficiently smaller than the chosen length scale $l_c$. Usually we take $l_m < \frac{1}{8} l_c$
 ## mshr
 mshr was included in FEniCS after 2016. 
 ### Documentation
@@ -36,7 +42,7 @@ Finally, plot the mesh with the FEniCS inbuilt function.
 
     plot(mesh, lw = 0.05)
     plt.savefig("mesh.jpg", dpi = 300)
-
+![Mesh from mshr](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/mesh.jpg?raw=true)
 ## Gmsh
 Gmsh is an open source 3D finite element mesh generator with a built-in CAD engine and post-processor.
 ### Install
@@ -61,7 +67,7 @@ Define some parameters
 
     L = 1
     notch_length = 0.5
-    notch_width = 0.02
+    fine_mesh_area_width = 0.06
     mesh_size = 0.05
     eps = mesh_size*1e-5
 Initialize Gmsh and add a new model
@@ -118,6 +124,7 @@ Here are the details for [Mesh.Algorithm](http://gmsh.info/doc/texinfo/gmsh.html
 
 The following command can open a Gmsh GUI to show your current geometry or mesh. You can insert it anywhere.
 
+    gmsh.model.occ.synchronize()
     if '-nopopup' not in sys.argv:
     	gmsh.fltk.run()
 The mesh can be saved by
@@ -146,4 +153,4 @@ Before importing the mesh into FEniCS, the mesh information should be saved in a
 
     mesh = Mesh("mesh.xml")
 
-
+![Mesh from Gmsh](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/mesh_Gmsh.jpg?raw=true)
