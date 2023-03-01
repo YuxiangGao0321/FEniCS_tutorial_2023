@@ -1,4 +1,14 @@
 # Some useful material for the Project 1
+## Starting FEniCS
+Windows (in cmd not powershell):
+
+    docker run -ti -p 127.0.0.1:8000:8000 -v %cd%:/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:2016.2.0
+
+MacOS：
+
+    docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:2016.2.0
+
+
 ## Mesh
 FEniCS inbuilt mesh
 
