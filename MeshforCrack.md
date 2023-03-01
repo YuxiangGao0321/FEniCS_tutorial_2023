@@ -16,7 +16,7 @@ Import the packages
 Define the notch size
 
     ### Define the notch size
-    notch_length = 0.2
+    notch_length = 0.5
     notch_width = 0.02
 
 Draw the domain by subtracting a notch from a square plate
@@ -60,7 +60,7 @@ First, import the packages
 Define some parameters
 
     L = 1
-    notch_length = 0.2
+    notch_length = 0.5
     notch_width = 0.02
     mesh_size = 0.05
     eps = mesh_size*1e-5
