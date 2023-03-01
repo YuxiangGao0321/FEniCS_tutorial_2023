@@ -14,5 +14,9 @@ MacOS：
 [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/MeshforCrack.md) for mshr and Gmsh
 ## Project 1 (02/22/2023)
 [Useful links for the Project 1](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/UsefulLink_Project1.md)
+
+- FEniCS inbuilt mesh generator
+- Calculate the reaction force
+- Plot results on the nodes and quad points with matplotlib
 ## Introduction (02/08/2023)
 [Slides](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Mesh%20generation%20and%20coding%20in%20FEniCS.pdf)
