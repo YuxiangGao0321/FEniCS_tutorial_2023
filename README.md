@@ -12,6 +12,8 @@ MacOS：
 
 ## Mesh generation for the phase field problem (03/01/2023)
 [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/MeshforCrack.md) for mshr and Gmsh
+
+[Slides](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Slides_03012023.pdf) for the class in 03/01/2023
 ## Project 1 (02/22/2023)
 [Useful links for the Project 1](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/UsefulLink_Project1.md)
 
