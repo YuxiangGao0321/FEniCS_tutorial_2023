@@ -98,15 +98,13 @@ where $\langle \cdot \rangle = (\ \cdot\ + |\cdot|)/2$ denotes the Macaulay brac
 - Lo's scheme
 [Lo et al.](https://www.sciencedirect.com/science/article/abs/pii/S0022509619306568) proposed a different decomposition scheme in three dimensions. [Sun et al.](https://www.sciencedirect.com/science/article/abs/pii/S2352431621000626) adapted the formulation for the two-dimensional (2-D) plane strain case as
 $$
-\begin{aligned} 
-\begin{cases}
-    &\textbf{if}~\varepsilon_\text{1}\ge\varepsilon_\text{2}\ge0, \\
-    &~~~~~\textbf{then}~\psi_\text{e}^+=\frac{\lambda}{2}(\varepsilon_\text{1}+\varepsilon_\text{2})^2+\mu(\varepsilon_\text{1}^2+\varepsilon_\text{1}^2);\\
-    &\textbf{elseif}~\varepsilon_\text{1}\ge0\ge\varepsilon_\text{2}~\textbf{and}~(1-\nu)\varepsilon_\text{1}+\nu\varepsilon_\text{2}>0, \\
-    &~~~~~\textbf{then}~\psi_\text{e}^+=\dfrac{E\left[(1-\nu)\varepsilon_\text{1}+\nu\varepsilon_\text{2}\right]^2}{2(1-2\nu)(1-\nu^2)}; \\
-    &\textbf{else}~\psi_\text{e}^+=0.
-\end{cases}
-\end{aligned}
+ \begin{cases}
+\textbf{if}\ \boldsymbol{\varepsilon}_1 \geq \boldsymbol{\varepsilon}_2 \geq 0,\\
+\ \ \textbf{then}\ \psi_e^+ = \dfrac{\lambda}{2}(\boldsymbol{\varepsilon}_1+\boldsymbol{\varepsilon}_2)^2+\mu (\boldsymbol{\varepsilon}_1^2+\boldsymbol{\varepsilon}_2^2);\\
+\textbf{elseif}  \ \boldsymbol{\varepsilon}_1 \geq 0 \geq \boldsymbol{\varepsilon}_2 \ \textbf{and} \ (1-\nu) \boldsymbol{\varepsilon}_1 + \nu \boldsymbol{\varepsilon}_2 \geq 0,\\
+\ \ \textbf{then}\ \psi_e^+ = \dfrac{E[(1-\nu)\boldsymbol{\varepsilon}_1+\nu \boldsymbol{\varepsilon}_2]^2}{2(1-2\nu)(1-\nu^2)};\\
+\textbf{else}\ \psi_e^+ = 0\,
+\end{cases} 
 $$
 
 Based on the formulation above, we can calculate the strain energy value at each quad point and save them in a Numpy array. Then, we can update the history variable by saving the max value in the loading history.
