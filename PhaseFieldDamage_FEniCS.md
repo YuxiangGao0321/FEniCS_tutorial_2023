@@ -97,15 +97,7 @@ $$\psi_e^+(\mathbf{\epsilon}) = \frac{\lambda}{2} {\langle \text{tr}(\mathbf{\ep
 where $\langle \cdot \rangle = (\ \cdot\ + |\cdot|)/2$ denotes the Macaulay brackets.
 - Lo's scheme
 [Lo et al.](https://www.sciencedirect.com/science/article/abs/pii/S0022509619306568) proposed a different decomposition scheme in three dimensions. [Sun et al.](https://www.sciencedirect.com/science/article/abs/pii/S2352431621000626) adapted the formulation for the two-dimensional (2-D) plane strain case as
-$$
- \begin{cases}
-\textbf{if}\ \boldsymbol{\varepsilon}_1 \geq \boldsymbol{\varepsilon}_2 \geq 0,\\
-\ \ \textbf{then}\ \psi_e^+ = \dfrac{\lambda}{2}(\boldsymbol{\varepsilon}_1+\boldsymbol{\varepsilon}_2)^2+\mu (\boldsymbol{\varepsilon}_1^2+\boldsymbol{\varepsilon}_2^2);\\
-\textbf{elseif}  \ \boldsymbol{\varepsilon}_1 \geq 0 \geq \boldsymbol{\varepsilon}_2 \ \textbf{and} \ (1-\nu) \boldsymbol{\varepsilon}_1 + \nu \boldsymbol{\varepsilon}_2 \geq 0,\\
-\ \ \textbf{then}\ \psi_e^+ = \dfrac{E[(1-\nu)\boldsymbol{\varepsilon}_1+\nu \boldsymbol{\varepsilon}_2]^2}{2(1-2\nu)(1-\nu^2)};\\
-\textbf{else}\ \psi_e^+ = 0\,
-\end{cases} 
-$$
+![](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/equation_strain_energy_Lo.jpg?raw=true)
 
 Based on the formulation above, we can calculate the strain energy value at each quad point and save them in a Numpy array. Then, we can update the history variable by saving the max value in the loading history.
 
