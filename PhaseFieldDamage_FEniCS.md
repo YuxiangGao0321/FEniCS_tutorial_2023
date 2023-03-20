@@ -40,13 +40,13 @@ And a scalar function space on the quad points for the damage field can be defin
 
 The test and trial functions for the phase field equation need to be defined on the nodes
 
-    d = TrialFunction(S)
-    omega = TestFunction(S)
+    d_trial = TrialFunction(S)
+    d_test = TestFunction(S)
 
 Finally, we define two variables, a Numpy array and a FEniCS function variable, to save the history variable after each iteration.
 
-    kappa = np.zeros(nQ_local)
-    phi = Function(SQ)
+    H_G_np = np.zeros(nQ_local)
+    H_G = Function(SQ)
 
 Where `nQ_local` is the number of the quad points, which can be derived from
 
@@ -109,25 +109,25 @@ $$
 Based on the formulation above, we can calculate the strain energy value at each quad point and save them in a Numpy array. Then, we can update the history variable by saving the max value in the loading history.
 
     ### update history variable
-    kappa= np.fmax(energy,kappa)
-    phi.vector()[:]= kappa
+    H_G_np = np.fmax(energy,H_G_np)
+    H_G.vector()[:]= H_G_np
     
 ## Solving the Phase Field Damage Evolution Equation
 
-Based on the weak form of the phase field damage evolution equation, the `LHS` and `RHS` can be defined by
+
+<!--- Based on the weak form of the phase field damage evolution equation, the `LHS` and `RHS` can be defined by 
 
     Lhs= ((Constant(eta/delta_t +1/lc)+2*phi)*inner(d,omega)*dx 
           + Constant(lc)*inner(nabla_grad(d),nabla_grad(omega))*dx)
     Rhs= (inner(omega,2*phi)*dx + Constant(eta/delta_t)*inner(omega,dmg)*dx)
-
-Then, the equation can be solved by
+--> Based on the weak form of the phase field damage evolution equation, we can defined the `LHS` and `RHS` of the equation. Then, the equation can be solved by
 
     ### solve the variational problem
-    w = Function(S)
-    solve(Lhs==Rhs,w,form_compiler_parameters=form_params)
+    phase = Function(S)
+    solve(Lhs==Rhs,phase,form_compiler_parameters=form_params)
 The damage field defined on element nodes is stored in `w`. To get the damage field defined on the quad points, a interpolate method of FEniCS is applied. We also need to ensure that the damage value after interpolation should in $[0,1]$ and irreversible.
 
-    dmgv = np.clip(interpolate(w, SQ).vector().get_local(), 0, 1) # Interpolate damage results from nodes to quad points
+    dmgv = np.clip(interpolate(phase, SQ).vector().get_local(), 0, 1) # Interpolate damage results from nodes to quad points
     dmg.vector()[:] = np.fmax(dmgv, dmg.vector().get_local()) # Damage evolution is irreversible
 
 Then the damage field can be used for the next iteration calculation.
