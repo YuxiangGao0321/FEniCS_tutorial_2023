@@ -120,7 +120,9 @@ Based on the formulation above, we can calculate the strain energy value at each
     Lhs= ((Constant(eta/delta_t +1/lc)+2*phi)*inner(d,omega)*dx 
           + Constant(lc)*inner(nabla_grad(d),nabla_grad(omega))*dx)
     Rhs= (inner(omega,2*phi)*dx + Constant(eta/delta_t)*inner(omega,dmg)*dx)
---> Based on the weak form of the phase field damage evolution equation, we can defined the `LHS` and `RHS` of the equation. Then, the equation can be solved by
+--> 
+
+Based on the weak form of the phase field damage evolution equation, we can defined the `LHS` and `RHS` of the equation. Then, the equation can be solved by
 
     ### solve the variational problem
     phase = Function(S)
