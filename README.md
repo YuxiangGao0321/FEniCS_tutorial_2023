@@ -11,7 +11,10 @@ MacOS：
     docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:2016.2.0
 
 ## Solving Phase Field Equation by FEniCS
-[Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/PhaseFieldDamage_FEniCS.md)
+
+- [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/PhaseFieldDamage_FEniCS.md)
+- [Note](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/Note_03202023.jpg?raw=true)
+- [Zoom Recording](https://vanderbilt.zoom.us/rec/share/P6Z4lniGENnVe13MfrxiL13Tzgy6ykm3gYDY1WRBz5IJZppgP705C3BRH7vke0P-.mJmepQ_5fFidVP1B)
 
 ## Mesh generation for the phase field problem (03/01/2023)
 [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/MeshforCrack.md) for mshr and Gmsh
