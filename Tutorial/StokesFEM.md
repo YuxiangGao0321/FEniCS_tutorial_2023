@@ -6,7 +6,6 @@ The MINI finite element was introduced by Arnold, Brezzi, and Fortin as a specif
 The MINI element was developed as a means of stabilizing the $[\mathcal{P}_1]^2/\mathcal{P}_1$ mixed finite element pair, which is known to be unstable. The addition of the cubic bubble functions to the discrete velocity space serves to enrich it, thus achieving greater stability while maintaining computational efficiency. The bubble function used in the MINI element is a cubic polynomial that is defined locally in each triangle and is given by the product of the barycentric coordinates $\varphi_1, \varphi_2,$ and $\varphi_3$ of the triangle itself. The form of the MINI element is shown below.
 
 $$v_{h} = a_h^{(v)}  + b_h^{(v)}x + c_h^{(v)}y + d_h^{(v)} \varphi_1(x,y) \varphi_2(x,y) \varphi_3(x,y) \\\\\\
-
 q_{h} = a_h^{(q)} + b_h^{(q)} x + c_h^{(q)} y$$
 
 Where $a_h, b_h, c_h, d_h$ are unknown constants.
