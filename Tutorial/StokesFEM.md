@@ -7,8 +7,8 @@ The MINI element was developed as a means of stabilizing the $[\mathcal{P}_1]^2/
 
 $$
 \begin{align}
-v_{h} \= a_h^{(v)}  + b_h^{(v)}x + c_h^{(v)}y + d_h^{(v)} \varphi_1(x,y) \varphi_2(x,y) \varphi_3(x,y) \\
-q_{h} \= a_h^{(q)} + b_h^{(q)} x + c_h^{(q)} y
+v_{h} &= a_h^{(v)}  + b_h^{(v)}x + c_h^{(v)}y + d_h^{(v)} \varphi_1(x,y) \varphi_2(x,y) \varphi_3(x,y) \\
+q_{h} &= a_h^{(q)} + b_h^{(q)} x + c_h^{(q)} y
 \end{align}$$
 
 Where $a_h, b_h, c_h, d_h$ are unknown constants.
