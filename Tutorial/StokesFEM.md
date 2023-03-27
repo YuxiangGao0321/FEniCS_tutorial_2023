@@ -9,7 +9,7 @@ $$v_{h} = a_h^{(v)}  + b_h^{(v)}x + c_h^{(v)}y + d_h^{(v)} \varphi_1(x,y) \varph
 q_{h} = a_h^{(q)} + b_h^{(q)} x + c_h^{(q)} y$$
 
 Where $a_h, b_h, c_h, d_h$ are unknown constants.
-![MINI elements](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/MNIelement.jpg?raw=true|width=100)
+![MINI elements](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/figs/MNIelement.jpg?raw=true|width=80)
 
 To define the `FunctionSpace` of the MINI element `(P1+B)*Q` in FEniCS 2016.2.0, one can follow the [documentation](https://fenicsproject.org/olddocs/dolfin/2016.2.0/python/demo/documented/stokes-mini/python/documentation.html) and use the following code:
 
