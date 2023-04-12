@@ -17,7 +17,7 @@ MacOS：
 
 ## Model intercomparison
 - [Documentation](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Tutorial/intercomparison.md) about the setup of the numerical examples for model intercomparison.
-- The mesh file and the results calculated by FEniCS can be found [here](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison).
+- The mesh file and the results calculated by FEniCS can be found [here](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison) or in the [Box folder](https://vanderbilt.box.com/s/49fi1gds7ol0o1lmietbshvfffo32q6c).
 - [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Tutorial/FEniCS2Numpy.md) about converting the FEniCS function variable to a Numpy array and loading results from text file.
 
 ## Solving Phase Field Equation by FEniCS (03/20/2023)
