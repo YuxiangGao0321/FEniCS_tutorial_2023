@@ -33,7 +33,7 @@ where $E = \mu \frac{3\lambda+2\mu}{\lambda + \mu}$ and $\nu = \frac{\lambda}{2(
 The solution of this problem solved by FEniCS with the mesh ([Project1/mesh_2d.xml](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Model_intercomparison/Project1/mesh_2d.xml)) can be found in [Project1/result_2d/Data](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_2d/Data). The table below shows the L2 error between the FEniCS solution and analytical solution for displacement and stress at each components.
 
 | **Variable** | $u_x$ | $u_y$|$\sigma_{xx}$| $\sigma_{xy}$ | $\sigma_{yy}$|
-|--|--|--|--|--|--|--|
+|--|--|--|--|--|--|
 | **FEM L2 error** | 2.29e-12 | 1.45e-11 | 1.33e-14 | 4.17e-15 | 1.81e-14 |
 
 The figure of each variable can be found in [Project1/result_2d/Figures](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_2d/Figures).
