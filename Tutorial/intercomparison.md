@@ -8,11 +8,13 @@ In this problem, we solve a 2D linear elasticity plane strain problem in a squar
 
 ### Analytical solution
 Based on the boundary condition, we know that
+
 $$
 u_x(x = 0) = 0 \\
 u_y(y = 0) = 0 \\
 u_y(y = 1) = 0.005
 $$
+
 As the problem is linear elasticity for plane strain, we can get
 $$
 \varepsilon_{yy} =  0.005 \\
