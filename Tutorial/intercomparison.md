@@ -16,16 +16,18 @@ u_y(y = 1) &= 0.005
 \end{align}$$
 
 As the problem is linear elasticity for plane strain, we can get
+
 $$\begin{align}
-\varepsilon_{yy} &=  0.005 \\
-\varepsilon_{xx} &= -\frac{\nu}{1-\nu}\varepsilon_{yy} \\
-\varepsilon_{xy} &= 0 \\
-\sigma_{xx} &= 0 \\
-\sigma_{xy} &= 0 \\
-\sigma_{yy} &= \frac{E}{(1+\nu)(1-2\nu)}(\nu \varepsilon_{xx} + (1-\nu) \varepsilon_{yy}) \\
-u_x &= x\varepsilon_{xx} \\
+\varepsilon_{yy} &=  0.005 \\\\\\
+\varepsilon_{xx} &= -\frac{\nu}{1-\nu}\varepsilon_{yy} \\\\\\
+\varepsilon_{xy} &= 0 \\\\\\
+\sigma_{xx} &= 0 \\\\\\
+\sigma_{xy} &= 0 \\\\\\
+\sigma_{yy} &= \frac{E}{(1+\nu)(1-2\nu)}(\nu \varepsilon_{xx} + (1-\nu) \varepsilon_{yy}) \\\\\\
+u_x &= x\varepsilon_{xx} \\\\\\
 u_y &= y\varepsilon_{yy}
 \end{align}$$
+
 where $E = \mu \frac{3\lambda+2\mu}{\lambda + \mu}$ and $\nu = \frac{\lambda}{2(\lambda + \mu)}$.
 ###  Results evaluation
 The solution of this problem solved by FEniCS with the mesh ([Project1/mesh_2d.xml](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Model_intercomparison/Project1/mesh_2d.xml)) can be found in [Project1/result_2d/Data](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_2d/Data). The table below shows the L2 error between the FEniCS solution and analytical solution for displacement and stress at each components.
