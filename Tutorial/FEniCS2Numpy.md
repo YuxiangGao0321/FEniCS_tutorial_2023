@@ -41,5 +41,10 @@ The $\sigma_{xx}$ at each integration points are saved in the Numpy array `x_arr
 
 ## Save and load the results
 
-The Numpy array can be saved as a text file by [numpy.savetxt](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html). The text field can be load by [numpy.loadtxt](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html)
+The Numpy array can be saved as a text file by [numpy.savetxt](https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html). The text field can be load by [numpy.loadtxt](https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html).
+
+The L2 norm (root mean square error) of two vectors/arrays for the model intercomparison can be calculated by
+
+    sxx_array_data = np.loadtxt(file_name)
+    L2_vector = np.sqrt(np.mean((sxx_array - sxx_array_data)**2))
 
