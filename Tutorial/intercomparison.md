@@ -44,24 +44,28 @@ In this problem, we solve a 3D linear elasticity problem in a cubic domain $\Ome
 
 ### Analytical solution
 Based on the boundary condition, we know that
-$$
-u_x(x = 0) = 0 \\
-u_y(y = 0) = 0 \\
-u_z(z = 0) = 0 \\
-u_z(z = 1) = 0.005
-$$
+
+$$\begin{align}
+u_x(x = 0) &= 0 \\\\\\
+u_y(y = 0) &= 0 \\\\\\
+u_z(z = 0) &= 0 \\\\\\
+u_z(z = 1) &= 0.005
+\end{align}$$
+
 As the problem is linear elasticity, we can get
-$$
-\varepsilon_{zz} =  0.005 \\
-\varepsilon_{xx} = \varepsilon_{yy} =  -\varepsilon_{zz} \frac{\lambda}{2(\mu + \lambda)}\\
-\varepsilon_{xy} = \varepsilon_{xz} = \varepsilon_{yz} = 0 \\
-\sigma_{xx} = \sigma_{yy} = 0 \\
-\sigma_{xy} = \sigma_{xz} = \sigma_{yz} = 0 \\
-\sigma_{zz} = \lambda \varepsilon_{xx} + \lambda \varepsilon_{yy}  + (2\mu+\lambda) \varepsilon_{zz} \\
-u_x = x\varepsilon_{xx} \\
-u_y = y\varepsilon_{yy} \\
-u_z = z\varepsilon_{zz}
-$$
+
+$$\begin{align}
+\varepsilon_{zz} &=  0.005 \\\\\\
+\varepsilon_{xx} &= \varepsilon_{yy} =  -\varepsilon_{zz} \frac{\lambda}{2(\mu + \lambda)}\\\\\\
+\varepsilon_{xy} &= \varepsilon_{xz} = \varepsilon_{yz} = 0 \\\\\\
+\sigma_{xx} &= \sigma_{yy} = 0 \\\\\\
+\sigma_{xy} &= \sigma_{xz} = \sigma_{yz} = 0 \\\\\\
+\sigma_{zz} &= \lambda \varepsilon_{xx} + \lambda \varepsilon_{yy}  + (2\mu+\lambda) \varepsilon_{zz} \\\\\\
+u_x &= x\varepsilon_{xx} \\\\\\
+u_y &= y\varepsilon_{yy} \\\\\\
+u_z &= z\varepsilon_{zz}
+\end{align}$$
+
 ###  Results evaluation
 The solution of this problem solved by FEniCS with the mesh ([Project1/mesh_3d.xml](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Model_intercomparison/Project1/mesh_3d.xml)) can be found in [Project1/result_3d/Data](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_3d/Data). The table below shows the L2 error between the FEniCS solution and analytical solution for displacement and stress at each components.
 | **Variable** | $u_x$ | $u_y$|$u_z$|$\sigma_{xx}$| $\sigma_{yy}$ | $\sigma_{zz}$|$\sigma_{xy}$| $\sigma_{xz}$ | $\sigma_{yz}$|
