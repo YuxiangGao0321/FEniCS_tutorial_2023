@@ -101,7 +101,7 @@ To compare the load versus displacement diagram with the result in [Sun et al. (
 | $\lambda$ | 121.5 | $\textnormal{kN/mm}^2$|
 | $\mu$ | 80.7 | $\textnormal{kN/mm}^2$|
 | $G_c$ | 2.7e-3 | $\textnormal{kN/mm}^2$|
-| $l_c$ | 0.0015 | $\textnormal{mm}$|
+| $l_c$ | 0.015 | $\textnormal{mm}$|
 | $\eta$ | 1e-6 | $\textnormal{kN} \cdot \textnormal{s/m}^2$|
 
 And the same displacement control is also applied with a constant increment $\Delta u = 10^{-5}$ when $u<0.005$ and $\Delta u = 10^{-6}$ after that. The strain energy decomposition scheme proposed by Miehe el al. is applied for updating history variable. The iteration will be stopped when the reaction force on the top boundary will be less than 1% peak load.
