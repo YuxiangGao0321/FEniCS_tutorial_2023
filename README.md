@@ -13,6 +13,12 @@ MacOS：
 ## Some methods for solving Stokes equation with FEM
 
 - [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Tutorial/StokesFEM.md)
+- [Code](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Codes/TH_Tien.py) for solving Stokes equation with P2-P1 elements in FEniCS developed by Tien.
+
+## Model intercomparison
+- [Documentation](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Tutorial/intercomparison.md) about the setup of the numerical examples for model intercomparison.
+- The mesh file and the results calculated by FEniCS can be found [here](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison).
+- [Tutorial](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Tutorial/FEniCS2Numpy.md) about converting the FEniCS function variable to a Numpy array and loading results from text file.
 
 ## Solving Phase Field Equation by FEniCS (03/20/2023)
 
