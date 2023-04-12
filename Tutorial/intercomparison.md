@@ -68,9 +68,11 @@ u_z &= z\varepsilon_{zz}
 
 ###  Results evaluation
 The solution of this problem solved by FEniCS with the mesh ([Project1/mesh_3d.xml](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Model_intercomparison/Project1/mesh_3d.xml)) can be found in [Project1/result_3d/Data](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_3d/Data). The table below shows the L2 error between the FEniCS solution and analytical solution for displacement and stress at each components.
+
 | **Variable** | $u_x$ | $u_y$|$u_z$|$\sigma_{xx}$| $\sigma_{yy}$ | $\sigma_{zz}$|$\sigma_{xy}$| $\sigma_{xz}$ | $\sigma_{yz}$|
-|--|--|--|--|--|--|--|--|--|--|--|
+|--|--|--|--|--|--|--|--|--|--|
 | **FEM L2 error** | 3.65e-12 | 3.18e-12 | 1.11e-11 | 3.15e-14 | 2.93e-14 | 4.79e-14 | 4.23e-15 | 7.72e-15 | 7.79e-15|
+
 The pvd file of each variable can be found in [Project1/result_3d/Figures](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/tree/main/Model_intercomparison/Project1/result_3d/Figures).
 
 ## 2D uniaxial tension for the phase field fracture
