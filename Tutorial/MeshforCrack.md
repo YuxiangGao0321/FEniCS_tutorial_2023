@@ -149,7 +149,7 @@ The object and the tool should be referred by a vector of pairs of integers
 
 ### Import the mesh to FEniCS
 
-Before importing the mesh into FEniCS, the mesh information should be saved in a .dat file. Then, use the [code]([https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Gmsh2xml.py](https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Codes/Gmsh2xml.py)) I posted to convert the mesh information to a .xml file with a readable format for FEniCS. Then the mesh can be import to FEniCS by
+Before importing the mesh into FEniCS, the mesh information should be saved in a .dat file. Then, use the [code]([https://github.com/YuxiangGao0321/FEniCS_tutorial_2023/blob/main/Gmsh2xml.py]) I posted to convert the mesh information to a .xml file with a readable format for FEniCS. Then the mesh can be import to FEniCS by
 
     mesh = Mesh("mesh.xml")
 
